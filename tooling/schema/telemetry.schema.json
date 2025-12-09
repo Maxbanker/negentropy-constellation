@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "budget": {
+      "type": "number"
+    },
+    "decision": {
+      "enum": [
+        "allow",
+        "block",
+        "throttle",
+        "quarantine"
+      ],
+      "type": "string"
+    },
+    "ethics": {
+      "type": "number"
+    },
+    "gamma": {
+      "type": "number"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "omega": {
+      "type": "number"
+    },
+    "psi": {
+      "type": "number"
+    },
+    "reason": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "t": {
+      "type": "integer"
+    },
+    "veil": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "t",
+    "decision"
+  ],
+  "title": "Negentropy Telemetry",
+  "type": "object"
+}

@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  omega:
+    build: ./packages/omega-orchestrator
+  detector:
+    build: ./packages/sft-detector
+  alpha:
+    build: ./packages/alpha-harness
+  observer:
+    build: ./packages/observer-continuity
+  chem:
+    build: ./packages/chem-simulator
+  weaver:
+    build: ./packages/weaver-11
+  ethics:
+    build: ./packages/ethics-gate
+  tguard:
+    build: ./packages/tri-temporal-guard
+  xsft:
+    build: ./packages/xsft-corridor
+  bench:
+    build: ./packages/sft-bench
+
+  demo:
+    image: python:3.11-slim
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    command: bash -lc "python -m venv .venv && . .venv/bin/activate && pip install -e packages/omega-orchestrator -e packages/sft-detector -e packages/alpha-harness -e packages/observer-continuity -e packages/chem-simulator -e packages/weaver-11 -e packages/ethics-gate -e packages/tri-temporal-guard -e packages/xsft-corridor -e packages/sft-bench && bash demos/run_demo.sh"
+    depends_on:
+      - omega
+      - detector
+      - alpha
+      - observer
+      - chem
+      - weaver
+      - ethics
+      - tguard
+      - xsft
+      - bench
