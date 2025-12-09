@@ -1,0 +1,7 @@
+route: "lab→analysis"
+policy: { L_c: 0.2, O_c: 0.92 }
+budgets: { export_budget: 0.1 }
+state:
+  before: "examples/before.npy"
+  after:  "examples/after.npy"
+telemetry: true
