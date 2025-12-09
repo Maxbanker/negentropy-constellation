@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tri-temporal-guard"
+version = "0.1.0"
+description = "Detect and throttle temporal shear across planning, execution, and narrative axes."
+authors = [{name = "Steven Lanier"}, {name="SEAL Division"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["pydantic>=2.6","pyyaml>=6.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+tguard = "tri_temporal_guard.cli:main"

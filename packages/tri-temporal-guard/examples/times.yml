@@ -1,0 +1,6 @@
+t_plan: 1.0
+t_exec: 1.2
+t_story: 1.0
+policy:
+  shear_warn: 0.25
+  shear_max: 0.5

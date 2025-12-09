@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weaver-11"
+version = "0.1.0"
+description = "Motif-bridge engine to detect narrative tears and repair coherence (W_eff) in text dialogues."
+authors = [{name = "Steven Lanier"}, {name="SEAL Division"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24","pyyaml>=6.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+weaver = "weaver_11.cli:main"
