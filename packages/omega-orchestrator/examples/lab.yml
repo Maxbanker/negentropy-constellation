@@ -1,0 +1,22 @@
+seed: 123
+intent: "start_reaction"
+context:
+  risk: 0.23
+  uncertainty: 0.31
+  ethics_energy: 0.55
+  t_plan: 1.0
+  t_exec: 1.0
+  t_story: 1.2
+resources:
+  chem: true
+policy:
+  thresholds:
+    budget_min: 0.0
+    veil_min: 0.65
+    ethics_min: 0.60
+    tri_temporal_max_shear: 0.25
+  budgets:
+    export_budget: 0.10
+  uncertainty:
+    sigma: 0.31
+  adversary_index: 0.05

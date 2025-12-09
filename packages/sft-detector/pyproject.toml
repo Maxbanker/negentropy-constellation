@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sft-detector"
+version = "0.1.0"
+description = "Symbolic Field Theory collapse detector: computes psi/gamma/omega and applies an OR-predicate for early warning."
+authors = [{name = "Steven Lanier"}, {name="SEAL Division"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "pydantic>=2.6", "pyyaml>=6.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+sftdetect = "sft_detector.cli:main"

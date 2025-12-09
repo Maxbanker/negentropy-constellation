@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sft-bench"
+version = "0.1.0"
+description = "Standardized collapse-prediction benchmark with datasets, metrics (precision/recall, lead-time), and CLI."
+authors = [{name = "Steven Lanier"}, {name="SEAL Division"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24","pyyaml>=6.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+sftbench = "sft_bench.cli:main"
