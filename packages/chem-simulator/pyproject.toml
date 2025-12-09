@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chem-simulator"
+version = "0.1.0"
+description = "Entropy-aware reaction sandbox: simulate pulses (solvent/temp/light), compute ψ/γ/ω, apply collapse predicate, and export telemetry."
+authors = [{name = "Steven Lanier"}, {name="SEAL Division"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24","pyyaml>=6.0","pydantic>=2.6"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+chemsim = "chem_simulator.cli:main"

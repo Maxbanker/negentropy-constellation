@@ -1,0 +1,13 @@
+seed: 77
+name: "acetylation_screen_demo"
+steps: 48
+pulses:
+  - {t: 10, kind: "temp", magnitude: 0.6}
+  - {t: 16, kind: "solvent", magnitude: 0.4}
+  - {t: 24, kind: "light", magnitude: 0.5}
+  - {t: 32, kind: "temp", magnitude: 0.7}
+config:
+  psi_min: 0.35
+  gamma_max: 0.8
+  omega_min: 0.1
+  window: 16
