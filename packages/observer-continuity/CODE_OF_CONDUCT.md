@@ -1,0 +1,1 @@
+# Treat contributors with respect.

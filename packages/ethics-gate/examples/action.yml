@@ -1,0 +1,7 @@
+action: "publish_lab_results"
+context:
+  E: 0.72
+  sigma: 0.31
+  eps_adv: 0.05
+policy:
+  E_c: 0.60

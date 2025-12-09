@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "observer-continuity"
+version = "0.1.0"
+description = "Observer continuity kit: PSD sketching and O-score checks for identity integrity across handoffs."
+authors = [{name = "Steven Lanier"}, {name="SEAL Division"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "pydantic>=2.6", "pyyaml>=6.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+oc = "observer_continuity.cli:main"
